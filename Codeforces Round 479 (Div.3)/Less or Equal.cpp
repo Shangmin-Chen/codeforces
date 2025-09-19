@@ -54,6 +54,33 @@ ll power(ll base, ll exp, ll mod = MOD) {
 void solve() {
     // Your solution here
 
+    int n; int k;
+    cin >> n >> k;
+    // edge case
+    if (n == k) {
+        cout << INF;
+        return;
+    }
+
+    vi a(n);
+    for (int i = 0; i < n; i++) {
+        cin >> a[i];
+    }
+    sort(all(a));
+    // edge case
+    if (k == 0) {
+        if (a[0] == 1) {
+            cout << -1;
+        } else {
+            cout << 1;
+        }
+        return;
+    }
+    if (a[k-1] == a[k]){
+        cout << -1;
+    } else {
+        cout << a[k-1];
+    }
 }
 
 int main() {
