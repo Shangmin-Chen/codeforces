@@ -53,7 +53,24 @@ ll power(ll base, ll exp, ll mod = MOD) {
 
 void solve() {
     // Your solution here
-
+    int n; string s;
+    cin >> n >> s;
+    map<string, int> freq;
+    for (int i = 0; i < n - 1; i++) {
+        string t = "";
+        t += s[i];
+        t += s[i+1];
+        freq[t]++;
+    }
+    int max_freq = 0;
+    string ans = "";
+    for (auto p : freq) {
+        if (p.second > max_freq) {
+            max_freq = p.second;
+            ans = p.first;
+        }
+    }
+    cout << ans;
 }
 
 int main() {
