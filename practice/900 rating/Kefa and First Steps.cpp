@@ -53,7 +53,23 @@ ll power(ll base, ll exp, ll mod = MOD) {
 
 void solve() {
     // Your solution here
-
+    int n, cnt = 1, prev, maxCnt = 1;
+    cin >> n;
+    for (int i = 0; i < n; i++) {
+        if (i == 0) {
+            cin >> prev;
+            continue;
+        }
+        int curr; cin >> curr;
+        if (curr >= prev) {
+            cnt++;
+        } else {
+            cnt = 1;
+        }
+        maxCnt = max(maxCnt, cnt);
+        prev = curr;
+    }
+    cout << maxCnt;
 }
 
 int main() {
