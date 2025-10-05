@@ -81,7 +81,7 @@
 			"    fast_io;",
 			"    ",
 			"    int t = 1;",
-			"    // cin >> t;  // Comment this line if single test case",
+			"    cin >> t;  // Comment this line if single test case",
 			"    ",
 			"    while (t--) {",
 			"        solve();",

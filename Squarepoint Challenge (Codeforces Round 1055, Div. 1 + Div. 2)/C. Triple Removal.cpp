@@ -53,26 +53,7 @@ ll power(ll base, ll exp, ll mod = MOD) {
 
 void solve() {
     // Your solution here
-    int n, rk, ck, rd, cd;
 
-    cin >> n >> rk >> ck >> rd >> cd;
-
-    int ans = 0;
-    // go all the way down the other direction until you hit the wall then wait
-
-    // case 1 go down or up
-    if (rk > rd) {
-        ans = max(ans, n - rd);
-    } else if (rk < rd) {
-        ans = max(ans, rd);
-    }
-    // case 2 go left or right
-    if (ck > cd) {
-        ans = max(ans, n - cd);
-    } else if (ck < cd) {
-        ans = max(ans, cd);
-    }
-    cout << ans << endl;
 }
 
 int main() {
